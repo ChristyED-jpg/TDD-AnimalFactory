@@ -36,31 +36,43 @@ public class CatHouseTest {
     }
 
 
-
     // TODO - Create tests for `void remove(Integer id)`
 
     @Test
-    public void testremove(){
-
-
+    public void testremovebyid(){
+        // Given
+        String name = "";
+        Date birthDate = new Date();
+        Integer Id = 1;
+        Cat cat = new Cat(name, birthDate, Id);
+        AnimalWarehouse<Cat> catHouse = new AnimalWarehouse<>();
+        //when
+        catHouse.removeAnimalById(Id);
+        Integer expected =0;
+        Integer actual = catHouse.getNumberOfAnimals();
+        // then
+        Assert.assertEquals(expected, actual);
     }
-    // TODO - Create tests for `void remove(Cat cat)`
-
-
-    @Test
-    public void testremove(Cat cat){
-
-    }
-    // TODO - Create tests for `Cat getCatById(Integer id)`
-
-    @Test
-    public void  testgetCatById(){
-
-    }
-    // TODO - Create tests for `Integer getNumberOfCats()`
-
-    @Test
-    public void testgetnumberOfCats(){
-
-    }
+//
+//
+//    }
+//    // TODO - Create tests for `void remove(Cat cat)`
+//
+//
+//    @Test
+//    public void testremove(Cat cat){
+//
+//    }
+//    // TODO - Create tests for `Cat getCatById(Integer id)`
+//
+//    @Test
+//    public void  testgetCatById(){
+//
+//    }
+//    // TODO - Create tests for `Integer getNumberOfCats()`
+//
+//    @Test
+//    public void testgetnumberOfCats(){
+//
+//    }
 }

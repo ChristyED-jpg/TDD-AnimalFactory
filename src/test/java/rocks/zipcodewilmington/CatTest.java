@@ -10,8 +10,9 @@ import java.util.Date;
  * @author leon on 4/19/18.
  */
 public class CatTest {
-    // TODO - Create tests for `void setName(String name)`
-    // TODO - Create tests for `speak`
+
+
+
     // TODO - Create tests for `setBirthDate(Date birthDate)`
     // TODO - Create tests for `void eat(Food food)`
     // TODO - Create tests for `Integer getId()`
@@ -39,5 +40,44 @@ public class CatTest {
         Assert.assertEquals(givenBirthDate, retrievedBirthDate);
         Assert.assertEquals(givenId, retrievedId);
     }
+
+
+    // TODO - Create tests for `void setName(String name)`
+
+    @Test
+    public void testsetName(){
+        //Given
+        Date givenBirthDate = new Date();
+        Integer givenId = 0;
+        String givenName = "Zula";
+
+        //when
+        Cat cat = new Cat(givenName, givenBirthDate, givenId);
+        cat.setName(givenName);
+
+        //then
+        Assert.assertNotNull(givenName);
+    }
+
+
+    // TODO - Create tests for `speak`
+
+
+    @Test
+    public void testspeak(){
+        //Given
+        Date givenBirthDate = new Date();
+        Integer givenId = 0;
+        String givenName = "Zula";
+
+        //when
+        Cat cat = new Cat(givenName, givenBirthDate, givenId);
+        String expected = "meow";
+        String actual =
+
+
+
+    }
+
 
 }

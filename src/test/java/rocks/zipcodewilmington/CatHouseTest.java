@@ -5,6 +5,8 @@ import org.junit.Test;
 import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.animal_storage.AnimalWarehouse;
 
+import java.util.Date;
+
 /**
  * @author leon on 4/19/18.
  */
@@ -15,32 +17,35 @@ public class CatHouseTest {
     // TODO - Create tests for `void add(Cat cat)`
 
     @Test
-    public void testadd(Cat cat){
+    public void testadd() {
         // Given
+        String name = "";
+        Date birthDate = new Date();
+        Integer Id = 1;
+        Cat cat = new Cat(name, birthDate, Id);
         AnimalWarehouse<Cat> catHouse = new AnimalWarehouse<>();
         //When
-         new AnimalWarehouse<>().add(cat);
-        // then
-        Assert.assertTrue(true);
+        // check is a number was added to the cat house
+        // catHouse is empty
+        catHouse.add(cat);
+        Integer expected = 1;
+        Integer actual = catHouse.getNumberOfAnimals();
 
+        // then
+       Assert.assertEquals(expected, actual);
     }
+
+
 
     // TODO - Create tests for `void remove(Integer id)`
 
     @Test
-    public void testremove(Integer id){
-        //Given
-        AnimalWarehouse<Cat> catHouse = new AnimalWarehouse<>();
-        // when
-        new AnimalWarehouse<>().removeAnimalById(id);
-        //then
-        Assert.assertTrue(true);
+    public void testremove(){
+
+
     }
     // TODO - Create tests for `void remove(Cat cat)`
-     // Give
 
-     //When
-    //Then
 
     @Test
     public void testremove(Cat cat){
@@ -49,7 +54,7 @@ public class CatHouseTest {
     // TODO - Create tests for `Cat getCatById(Integer id)`
 
     @Test
-    public void  testgetCatById(Integer id){
+    public void  testgetCatById(){
 
     }
     // TODO - Create tests for `Integer getNumberOfCats()`

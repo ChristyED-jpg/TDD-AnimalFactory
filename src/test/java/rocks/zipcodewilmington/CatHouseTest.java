@@ -67,24 +67,50 @@ public class CatHouseTest {
         Cat cat = new Cat(name, birthDate, Id);
         AnimalWarehouse<Cat> catHouse = new AnimalWarehouse<>();
         //When
-        catHouse.
+        catHouse.removeAnimal(cat);
+        Integer expected = 0;
+        Integer actual = catHouse.getNumberOfAnimals();
         //then
+        Assert.assertEquals(expected,actual);
 
+    }
+    // TODO - Create tests for `Cat getCatById(Integer id)`
 
+    @Test
+    public void  testgetCatById(){
+        // Given
+        String name = "";
+        Date birthDate = new Date();
+        Integer Id = 1;
+        Cat cat = new Cat(name, birthDate, Id);
+        AnimalWarehouse<Cat> catHouse = new AnimalWarehouse<>();
+        // when
+        catHouse.getAnimalById(1);
+        Integer expected = 0;
+        Integer actual = catHouse.getNumberOfAnimals();
+        //then
+        Assert.assertEquals(expected,actual);
 
+    }
+    // TODO - Create tests for `Integer getNumberOfCats()`
+
+    @Test
+    public void testgetnumberOfCats(){
+        //Given
+        String name = "";
+        Date birthDate = new Date();
+        Integer Id = 1;
+        Cat cat = new Cat(name, birthDate, Id);
+        AnimalWarehouse<Cat> catHouse = new AnimalWarehouse<>();
+        //when
+        catHouse.getNumberOfAnimals();
+        Integer expected = 0;
+        Integer actual = catHouse.getNumberOfAnimals();
+        //then
+        Assert.assertEquals(expected, actual);
+
+    }
 
 
     }
-//    // TODO - Create tests for `Cat getCatById(Integer id)`
-//
-//    @Test
-//    public void  testgetCatById(){
-//
-//    }
-//    // TODO - Create tests for `Integer getNumberOfCats()`
-//
-//    @Test
-//    public void testgetnumberOfCats(){
-//
-//    }
-}
+

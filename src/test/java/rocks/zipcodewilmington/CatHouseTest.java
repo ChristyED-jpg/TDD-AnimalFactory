@@ -53,16 +53,28 @@ public class CatHouseTest {
         // then
         Assert.assertEquals(expected, actual);
     }
-//
-//
-//    }
-//    // TODO - Create tests for `void remove(Cat cat)`
-//
-//
-//    @Test
-//    public void testremove(Cat cat){
-//
-//    }
+
+
+    // TODO - Create tests for `void remove(Cat cat)`
+
+    @Test
+
+    public void testremovecat(){
+        // Given
+        String name = "";
+        Date birthDate = new Date();
+        Integer Id = 1;
+        Cat cat = new Cat(name, birthDate, Id);
+        AnimalWarehouse<Cat> catHouse = new AnimalWarehouse<>();
+        //When
+        catHouse.
+        //then
+
+
+
+
+
+    }
 //    // TODO - Create tests for `Cat getCatById(Integer id)`
 //
 //    @Test

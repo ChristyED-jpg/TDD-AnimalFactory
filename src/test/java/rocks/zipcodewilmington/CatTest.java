@@ -12,16 +12,6 @@ import java.util.Date;
  * @author leon on 4/19/18.
  */
 public class CatTest {
-
-
-
-
-
-
-
-    // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
-
-
     @Test
     public void constructorTest() {
         // Given (cat data)
@@ -146,6 +136,7 @@ public class CatTest {
     }
 
     // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
+    @Test
     public void testMammal(){
         Date givenBirthDate = new Date();
         Integer givenId = 0;

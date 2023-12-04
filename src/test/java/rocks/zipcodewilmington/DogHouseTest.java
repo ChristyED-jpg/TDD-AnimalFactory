@@ -31,4 +31,11 @@ public class DogHouseTest {
         // Then
         DogHouse.getNumberOfDogs();
     }
+
+    // TODO - Create tests for `void add(Dog dog)`
+    @Test
+    public void add(){
+
+    }
+
 }

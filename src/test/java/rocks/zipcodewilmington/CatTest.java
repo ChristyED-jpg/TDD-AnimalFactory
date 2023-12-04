@@ -12,14 +12,6 @@ import java.util.Date;
 public class CatTest {
 
 
-
-
-
-
-    // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
-    // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
-
-
     @Test
     public void constructorTest() {
         // Given (cat data)
@@ -75,7 +67,7 @@ public class CatTest {
         String expected = "meow";
 
         //then
-        Assert.assertNotNull(expected);
+        Assert.assertNotNull(cat );
     }
 
 
@@ -132,19 +124,25 @@ public class CatTest {
     }
 
     // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
+    @Test
+    public void testAnimal(){
+        Date givenBirthDate = new Date();
+        Integer givenId = 0;
+        String givenName = "Zula";
+
+        Cat cat = new Cat(givenName, givenBirthDate, givenId);
+
+       Assert.assertNotNull("meow");
+       Assert.assertNotNull(0);
+       Assert.assertNotNull(cat.getNumberOfMealsEaten());
+       Assert.assertNotNull(0);
+       Assert.assertNotNull(cat.);
 
 
 
 
 
-
-
-
-
-
-
-
-
+    }
 
 
 

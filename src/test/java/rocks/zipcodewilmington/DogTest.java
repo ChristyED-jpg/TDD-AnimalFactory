@@ -149,7 +149,7 @@ public class DogTest {
 
         Dog dog = new Dog(name, birthDate, id);
 
-        String str = "String";
+
 
         Assert.assertTrue(dog instanceof Mammal);
 

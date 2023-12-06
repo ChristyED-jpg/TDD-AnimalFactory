@@ -2,6 +2,7 @@ package rocks.zipcodewilmington;
 
 import org.junit.Assert;
 import org.junit.Test;
+import rocks.zipcodewilmington.animals.Animal;
 import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.Dog;
 
@@ -125,6 +126,21 @@ public class DogTest {
         Assert.assertNotNull(0);
 
     }
+
+    // TODO - Create test to check Animal inheritance;
+    @Test
+    public void testAnimal(){
+        Date birthDate = new Date();
+        Integer id = 0;
+        String name = "Milo";
+
+        Dog dog = new Dog(name, birthDate, id);
+
+        Assert.assertTrue(dog instanceof Animal);
+    }
+
+    // TODO - Create test to check Mammal inheritance;
+
 
     }
 

@@ -1,8 +1,11 @@
 package rocks.zipcodewilmington;
 
+import org.junit.Assert;
 import org.junit.Test;
+import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.Dog;
 import rocks.zipcodewilmington.animals.animal_creation.AnimalFactory;
+import rocks.zipcodewilmington.animals.animal_storage.AnimalWarehouse;
 import rocks.zipcodewilmington.animals.animal_storage.DogHouse;
 
 import java.util.Date;
@@ -34,8 +37,43 @@ public class DogHouseTest {
 
     // TODO - Create tests for `void add(Dog dog)`
     @Test
-    public void add(){
+    public void testAdd(){
+        // Given (some
+        String name = "";
+        Date birthDate = new Date();
+        Integer Id = 1;
+        Dog dog = new Dog(name, birthDate, Id);
+        AnimalWarehouse<Dog> dogHouse = new AnimalWarehouse<>();
 
+        //when
+        dogHouse.add(dog);
+        Integer expected = 1;  // checking if one dog
+        Integer actual = dogHouse.getNumberOfAnimals(); //  checking if the dog
+
+
+        //then
+        Assert.assertEquals(expected, actual);
     }
+
+     @Test
+    // TODO - Create tests for `void remove(Integer id)`
+     public void testremovebyid(){
+         // Given
+         String name = "";
+         Date birthDate = new Date();
+         Integer Id = 1;
+         Dog dog = new Dog(name, birthDate, Id);
+         AnimalWarehouse<Dog> dogHouse = new AnimalWarehouse<>();
+         //when
+         dogHouse.removeAnimalById(Id);
+         Integer expected =0;
+         Integer actual = dogHouse.getNumberOfAnimals();
+         // then
+         Assert.assertEquals(expected, actual);
+     }
+
+    // TODO - Create tests for `void remove(Dog dog)`
+
+
 
 }

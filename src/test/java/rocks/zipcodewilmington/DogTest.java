@@ -5,6 +5,7 @@ import org.junit.Test;
 import rocks.zipcodewilmington.animals.Animal;
 import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.Dog;
+import rocks.zipcodewilmington.animals.Mammal;
 
 import java.util.Date;
 
@@ -37,14 +38,14 @@ public class DogTest {
     // TODO - Create tests for `new Dog(String name, Date birthDate, Integer id)`
 
     @Test
-    public void testNewDog(){
+    public void testNewDog() {
         //Given
         Date birthDate = new Date();
         Integer id = 0;
         String name = "Milo";
 
         //when
-        Dog dog = new Dog(  name, birthDate, id);
+        Dog dog = new Dog(name, birthDate, id);
         dog.setName(name);
 
         //then
@@ -55,7 +56,7 @@ public class DogTest {
     // TODO - Create tests for `speak`
 
     @Test
-    public void testSpeak(){
+    public void testSpeak() {
         //Given
         Date birthDate = new Date();
         Integer id = 0;
@@ -70,18 +71,17 @@ public class DogTest {
     }
 
 
-
     // TODO - Create tests for `setBirthDate(Date birthDate)`
 
     @Test
-    public void testBirtDate(){
+    public void testBirtDate() {
         // Given
         Date birthDate = new Date();
         Integer id = 0;
         String name = "Milo";
 
         //when
-       Dog dog = new Dog(name, birthDate, id);
+        Dog dog = new Dog(name, birthDate, id);
         dog.setBirthDate(birthDate);
 
 
@@ -93,7 +93,7 @@ public class DogTest {
     // TODO - Create tests for `void eat(Food food)`
 
     @Test
-    public void testEat(){
+    public void testEat() {
         // Given
         Date birthDate = new Date();
         Integer id = 0;
@@ -112,7 +112,7 @@ public class DogTest {
 
     @Test
 
-    public void testGetId(){
+    public void testGetId() {
         // Given
         Date birthDate = new Date();
         Integer id = 0;
@@ -129,7 +129,7 @@ public class DogTest {
 
     // TODO - Create test to check Animal inheritance;
     @Test
-    public void testAnimal(){
+    public void testAnimal() {
         Date birthDate = new Date();
         Integer id = 0;
         String name = "Milo";
@@ -141,8 +141,21 @@ public class DogTest {
 
     // TODO - Create test to check Mammal inheritance;
 
+    @Test
+    public void testMammal() {
+        Date birthDate = new Date();
+        Integer id = 0;
+        String name = "Milo";
 
+        Dog dog = new Dog(name, birthDate, id);
+
+        Assert.assertTrue(dog instanceof Mammal);
     }
+
+
+}
+
+
 
 
 

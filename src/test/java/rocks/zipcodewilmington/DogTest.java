@@ -36,19 +36,17 @@ public class DogTest {
     // TODO - Create tests for `new Dog(String name, Date birthDate, Integer id)`
 
     @Test
-
-    @Test
     public void testNewDog(){
         //Given
         Date birthDate = new Date();
         Integer id = 0;
-        String name = "";
+        String name = "Milo";
 
         //when
         Dog dog = new Dog(  name, birthDate, id);
-        dog.setName("");
+        dog.setName(name);
 
         //then
-        Assert.assertNotNull("");
+        Assert.assertNotNull(name);
     }
 }

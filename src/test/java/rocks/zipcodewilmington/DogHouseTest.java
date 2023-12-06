@@ -37,7 +37,7 @@ public class DogHouseTest {
 
     // TODO - Create tests for `void add(Dog dog)`
     @Test
-    public void testAdd(){
+    public void testAddDog(){
         // Given (some
         String name = "";
         Date birthDate = new Date();
@@ -57,7 +57,7 @@ public class DogHouseTest {
 
      @Test
     // TODO - Create tests for `void remove(Integer id)`
-     public void testremovebyid(){
+     public void testremoveById(){
          // Given
          String name = "";
          Date birthDate = new Date();
@@ -73,6 +73,44 @@ public class DogHouseTest {
      }
 
     // TODO - Create tests for `void remove(Dog dog)`
+
+    @Test
+
+    public void testremoveDog(){
+        // Given
+        String name = "";
+        Date birthDate = new Date();
+        Integer Id = 1;
+        Dog dog = new Dog(name, birthDate, Id);
+        AnimalWarehouse<Dog>dogHouse = new AnimalWarehouse<>();
+        //When
+       dogHouse.removeAnimal(dog);
+        Integer expected = 0;
+        Integer actual = dogHouse.getNumberOfAnimals();
+        //then
+        Assert.assertEquals(expected,actual);
+
+    }
+
+    // TODO - Create tests for `Dog getDogById(Integer id)`
+
+    @Test
+    public void  testgetDogById(){
+        // Given
+        String name = "";
+        Date birthDate = new Date();
+        Integer Id = 1;
+        Dog dog = new Dog(name, birthDate, Id);
+        AnimalWarehouse<Dog> catHouse = new AnimalWarehouse<>();
+        // when
+        catHouse.getAnimalById(1);
+        Integer expected = 0;
+        Integer actual = catHouse.getNumberOfAnimals();
+        //then
+        Assert.assertEquals(expected,actual);
+
+    }
+
 
 
 

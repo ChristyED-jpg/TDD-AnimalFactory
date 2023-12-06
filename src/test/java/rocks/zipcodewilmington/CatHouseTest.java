@@ -28,8 +28,8 @@ public class CatHouseTest {
         // check is a number was added to the cat house
         // catHouse is empty
         catHouse.add(cat);
-        Integer expected = 1;
-        Integer actual = catHouse.getNumberOfAnimals();
+        Integer expected = 1; // check is a number was added to the cat house
+        Integer actual = catHouse.getNumberOfAnimals();// check if
 
         // then
        Assert.assertEquals(expected, actual);
@@ -110,6 +110,8 @@ public class CatHouseTest {
         Assert.assertEquals(expected, actual);
 
     }
+
+
 
 
     }

@@ -42,13 +42,13 @@ public class DogTest {
         //Given
         Date birthDate = new Date();
         Integer id = 0;
-        String name = "Milo";
+        String name = "";
 
         //when
         Dog dog = new Dog(  name, birthDate, id);
-        dog.setName("Milo");
+        dog.setName("");
 
         //then
-        Assert.assertNotNull("Milo");
+        Assert.assertNotNull("");
     }
 }

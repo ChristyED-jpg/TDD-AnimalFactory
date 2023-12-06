@@ -25,11 +25,11 @@ public class CatHouseTest {
         Cat cat = new Cat(name, birthDate, Id);
         AnimalWarehouse<Cat> catHouse = new AnimalWarehouse<>();
         //When
-        // check is a number was added to the cat house
-        // catHouse is empty
+
+
         catHouse.add(cat);
-        Integer expected = 1; // check is a number was added to the cat house
-        Integer actual = catHouse.getNumberOfAnimals();// check if
+        Integer expected = 1; // Check the one cat adding in the cat house
+        Integer actual = catHouse.getNumberOfAnimals();// check is a number is added to the cat house
 
         // then
        Assert.assertEquals(expected, actual);

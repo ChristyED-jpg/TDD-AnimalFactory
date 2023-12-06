@@ -2,7 +2,10 @@ package rocks.zipcodewilmington;
 
 import org.junit.Assert;
 import org.junit.Test;
+import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.Dog;
+
+import java.util.Date;
 
 /**
  * @author leon on 4/19/18.
@@ -27,5 +30,25 @@ public class DogTest {
         // Then (we expect to get the given name from the dog)
         String dogName = dog.getName();
         Assert.assertEquals(dogName, givenName);
+    }
+
+
+    // TODO - Create tests for `new Dog(String name, Date birthDate, Integer id)`
+
+    @Test
+
+    @Test
+    public void testNewDog(){
+        //Given
+        Date birthDate = new Date();
+        Integer id = 0;
+        String name = "Milo";
+
+        //when
+        Dog dog = new Dog(  name, birthDate, id);
+        dog.setName("Milo");
+
+        //then
+        Assert.assertNotNull("Milo");
     }
 }

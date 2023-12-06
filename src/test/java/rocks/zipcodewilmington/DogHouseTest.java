@@ -22,7 +22,7 @@ public class DogHouseTest {
 
     @Test
     public void testGetNumberOfDogs() {
-        // Given (some
+        // Given
         String name = "Milo";
         Date birthDate = new Date();
         Dog animal = AnimalFactory.createDog(name, birthDate);
@@ -48,7 +48,7 @@ public class DogHouseTest {
         //when
         dogHouse.add(dog);
         Integer expected = 1;  // checking if one dog
-        Integer actual = dogHouse.getNumberOfAnimals(); //  checking if the dog
+        Integer actual = dogHouse.getNumberOfAnimals(); //  checking if the dog is added i the dogHouse
 
 
         //then
@@ -62,7 +62,6 @@ public class DogHouseTest {
          String name = "";
          Date birthDate = new Date();
          Integer Id = 1;
-         Dog dog = new Dog(name, birthDate, Id);
          AnimalWarehouse<Dog> dogHouse = new AnimalWarehouse<>();
          //when
          dogHouse.removeAnimalById(Id);

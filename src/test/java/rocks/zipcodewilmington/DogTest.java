@@ -107,6 +107,25 @@ public class DogTest {
         Assert.assertNotNull(food);
     }
 
+    // TODO - Create tests for `Integer getId()`
+
+    @Test
+
+    public void testGetId(){
+        // Given
+        Date birthDate = new Date();
+        Integer id = 0;
+        String name = "Milo";
+
+        // when
+        Dog dog = new Dog(name, birthDate, id);
+        dog.getId();
+
+        //then
+        Assert.assertNotNull(0);
+
+    }
+
     }
 
 

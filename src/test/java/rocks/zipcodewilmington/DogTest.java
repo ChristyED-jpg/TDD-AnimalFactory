@@ -150,6 +150,9 @@ public class DogTest {
         Dog dog = new Dog(name, birthDate, id);
 
         Assert.assertTrue(dog instanceof Mammal);
+
+
+
     }
 
 

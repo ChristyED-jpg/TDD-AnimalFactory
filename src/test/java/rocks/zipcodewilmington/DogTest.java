@@ -49,4 +49,71 @@ public class DogTest {
         //then
         Assert.assertNotNull(name);
     }
-}
+
+
+    // TODO - Create tests for `speak`
+
+    @Test
+    public void testSpeak(){
+        //Given
+        Date birthDate = new Date();
+        Integer id = 0;
+        String name = "Milo";
+
+        //when
+        Dog dog = new Dog(name, birthDate, id);
+        String expected = "bark!";
+
+        //then
+        Assert.assertNotNull(expected);
+    }
+
+
+
+    // TODO - Create tests for `setBirthDate(Date birthDate)`
+
+    @Test
+    public void testBirtDate(){
+        // Given
+        Date birthDate = new Date();
+        Integer id = 0;
+        String name = "Milo";
+
+        //when
+       Dog dog = new Dog(name, birthDate, id);
+        dog.setBirthDate(birthDate);
+
+
+        // then
+        Assert.assertNotNull(birthDate);
+
+    }
+
+    // TODO - Create tests for `void eat(Food food)`
+
+    @Test
+    public void testEat(){
+        // Given
+        Date birthDate = new Date();
+        Integer id = 0;
+        String name = "Milo";
+
+        // when
+        Dog dog = new Dog(name, birthDate, id);
+        Food food = new Food();
+        dog.eat(food);
+
+        //then
+        Assert.assertNotNull(food);
+    }
+
+    }
+
+
+
+
+
+
+
+
+

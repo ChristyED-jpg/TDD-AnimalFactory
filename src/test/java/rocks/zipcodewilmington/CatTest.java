@@ -73,7 +73,7 @@ public class CatTest {
 
     // TODO - Create tests for `setBirthDate(Date birthDate)`
     @Test
-    public void testBirtDate(){
+    public void testBirtDate() {
         // Given
         Date givenBirthDate = new Date();
         Integer givenId = 0;
@@ -88,6 +88,7 @@ public class CatTest {
         Assert.assertNotNull(givenName);
 
     }
+
     // TODO - Create tests for `void eat(Food food)`
 
     @Test
